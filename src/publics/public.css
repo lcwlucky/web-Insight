@@ -1,0 +1,272 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  min-height: 100%;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.mask {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background: rgba(255,255,255,0.7);
+  z-index: 999;
+}
+table{
+  /*border-collapse: separate;*/
+  border-spacing: 0px;
+  width: 1300px;
+}
+
+table thead{
+  color: #5e5e5e;
+}
+table tr td{
+  padding: 10px 0px;
+}
+table tbody tr:hover{
+  background-color: rgba(131, 138, 140, 0.11);
+  border-radius: 5px;
+}
+.item_checked{
+  background-color: rgba(178, 185, 187, 0.11);
+  border-radius: 5px;
+}
+.checked{
+  width: 20px;
+}
+.importance{
+  width: 20px;
+}
+.preview{
+  width: 80px;
+}
+.name{
+  width: 550px;
+}
+.time{
+  width: 300px;
+}
+.size{
+  width: 150px;
+}
+.star{
+  width: 300px;
+}
+.star svg{
+  width: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.file_name svg{
+  font-size: 30px;
+  margin-right: 10px;
+}
+.file_name span{
+  cursor: pointer;
+}
+.file_name span:hover{
+  color: #3781a3;
+}
+.file_importance svg{
+  font-size: 25px;
+  margin-right: 10px;
+}
+.task_list .el-input--prefix .el-input__inner {
+  border: none;
+  /*opacity: 0 ;*/
+  width: 85px;
+  background: transparent;
+  padding: 0px !important;
+}
+.task_list .el-date-editor--month .el-input__prefix,.el-date-editor--month  .el-input__suffix {
+  position: static !important;
+  cursor: pointer;
+}
+.sidebar .el-input__inner{
+  width: 325px;
+  border-radius: 5px;
+  height: 35px;
+  padding: 5px 10px;
+  border: 1px solid rgba(112, 112, 112, 0.73);
+}
+/*所有的标签显示*/
+.tag,.remark{
+  display: inline-block;
+  background-color: #dbdbdb;
+  border: 1px solid #f5f5f5;
+  border-radius:5px;
+  padding: 2px 5px;
+  margin: 5px 10px 5px 0px;
+  font-size: 11px;
+}
+
+.tag img{
+  cursor: pointer;
+}
+.opacity{
+  background-color: rgba(255, 255, 255, .1);
+}
+/*所有的关键字显示*/
+.keyword,.ocr{
+  display: inline-block;
+  /*margin: 5px 10px 5px 0px;*/
+  padding: 0 10px 5px 0px;
+}
+.mergeBtn{
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  padding: 5px 10px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  color: white;
+  background-color: #efe5a0;
+  cursor: pointer;
+}
+.albumBtn{
+  position: absolute;
+  top: 5px;
+  left: 205px;
+  padding: 5px 10px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  color: white;
+  background-color: #aeefbe;
+  cursor: pointer;
+}
+.defBtn {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  padding: 5px 10px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  color: white;
+  background-color: #ea9e9e;
+  cursor: pointer;
+}
+.clearFix:before,
+.clearFix:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.clearFix{
+  zoom: 1;
+}
+.file_nav{
+  width: 100%;
+  margin: 20px 0px;
+  font-size: 14px;
+  height: 20px;
+}
+.el-dropdown-menu{
+  padding: 5px !important;
+  top: 55px !important;
+}
+.el-dropdown-menu li:hover{
+  background-color: rgba(203, 203, 203, 0.27) !important;
+  border-radius:5px;
+  color: #616161 !important;
+}
+/*卡片显示*/
+.six_info_outer .docs_item>svg,
+.six_info_outer .others_item>svg{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.highlight_info {
+  position: absolute;
+  left: 175px;
+  top: 0px;
+  background-color: white;
+  width: 170px;
+  height: auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px #acacac;
+  padding: 10px;
+  word-break: break-word;
+  z-index: 9999;
+  color: #171717;
+  font-size: 14px;
+}
+.highlight_info .name_hl,
+.highlight_info .keyword_pic,
+.highlight_info .tag_pic,
+.highlight_box .remarks{
+  display: inline-block;
+  width: 50px;
+  color: #6c6c6c;
+  font-size: 16px;
+}
+.six_info_outer .pics>.pics_item:hover,
+.six_info_outer .videos>.videos_item:hover,
+.six_info_outer .docs_item:hover,
+.six_info_outer .audios_item:hover,
+.six_info_outer .others_item:hover {
+  background-color: rgba(221, 221, 221, 0.78);
+  border-radius: 5px;
+}
+.pics_item:hover .highlight_box,
+.videos_item:hover .highlight_box,
+.docs_item:hover .highlight_box,
+.audios_item:hover .highlight_box,
+.others_item:hover .highlight_box{
+  display: block;
+}
+.six_info_outer .pics>.pics_item,
+.six_info_outer .videos>.videos_item,
+.six_info_outer .docs_item,
+.six_info_outer .audios_item,
+.six_info_outer .others_item{
+  position: relative;
+  margin: 10px;
+  padding-left: 10px;
+}
+.six_info_outer .icon-checked_circle{
+  left: 0px;
+}
+.blockItemCheckedClass{
+  background-color: rgba(221, 221, 221, 0.78);
+  border-radius: 5px;
+}
+.float_left{
+  float: left;
+}
+.float_right{
+  float: right;
+  margin-right: 10px;
+}
+.six_info_outer .bigger{
+  width: 800px;
+}
+.six_info_outer .smaller{
+  width: 400px;
+}
+.six_info_outer .count_box{
+  height: 100px;
+}
+.merge_btn_doc{
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  padding: 5px 10px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  color: white;
+  background-color: #7edae4;
+  cursor: pointer;
+}

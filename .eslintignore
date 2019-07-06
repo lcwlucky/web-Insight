@@ -1,0 +1,8 @@
+/build/
+/config/
+/dist/
+/*.js
+*.vue
+*.js
+// eslint-disable-next-line
+/* eslint-disable */
