@@ -117,7 +117,7 @@
     },
     methods:{
       //创建该分类各种文件数量的条形图
-      createEcharts(){
+      createEcharts() {
         this.echarts = echarts.init(this.$refs.fiveCount)
         this.echarts.setOption({
           grid:{show:false},

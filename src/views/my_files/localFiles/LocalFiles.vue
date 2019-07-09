@@ -164,11 +164,13 @@
           toggleTip(this, error)
         })
       },
+
+      //得到选中的文件里的所有文件
       getFiles() {
         this.files = []
         this.catalog = []
         const fileList = [...event.target.files]
-        this.absolutePath = fileList[0].webkitRelativePath.split('/')[0]
+        this.absolutePath = fileList[0].webkitRelativePath.split('/')[0] //文件夹名称
         const path = []
         let id = 0
         fileList.forEach(el => {
@@ -190,6 +192,8 @@
 
         })
       },
+
+      //设置左边文件夹层次结构
       setCatalog(path) {
         const children = []
         let count = -1
@@ -342,7 +346,9 @@
 
         // 拼图
         const drawImages = (images, callback) => {
+          //设置了图片的宽度为400，要按比例得到高度
           const heights = images.map(item => width / item.width * item.height)
+          //得到拼图画布高度
           const canvasHeight = heights.reduce((total, current) => total + current)
           this.canvasHeight = canvasHeight
           console.log(this.canvasHeight,888)
@@ -355,10 +361,11 @@
 
           images.forEach((item, index) => {
             const height = heights[index]
+            //画图
             context.drawImage(item, 0, y, width, height)
             y += height
           })
-          callback(canvas.toDataURL('image/jpeg', encoderOptions))
+          callback(canvas.toDataURL('image/jpeg', encoderOptions))//生成拼图画布的地址，方面显示下载
         }
 
 

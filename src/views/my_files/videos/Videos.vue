@@ -63,6 +63,7 @@
     },
     mounted(){
       this.fetchList()
+      //注册文件更新的消息
       window.EE.on('fetchVideos',()=>{this.fetchList()})
     },
     methods:{
